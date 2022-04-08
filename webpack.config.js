@@ -1,9 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const webpack = require('webpack');
-const WebpackBar = require('webpackbar');
 const path = require('path');
 
+/** @type import('webpack').Configuration */
 module.exports = {
   mode: 'development',
   entry: {
@@ -90,19 +89,16 @@ module.exports = {
     historyApiFallback: {
       rewrites: [{ from: /./, to: '/index.html' }],
     },
-    disableHostCheck: true,
     hot: true,
-    open: true,
+    open: false,
   },
-  devtool: '#source-map',
+  devtool: 'eval-cheap-module-source-map',
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: 'examples/index.html',
       filename: 'index.html',
       inject: true,
     }),
     new VueLoaderPlugin(),
-    new WebpackBar(),
   ],
 };

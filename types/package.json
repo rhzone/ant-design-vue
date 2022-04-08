@@ -1,0 +1,4 @@
+{
+  "name": "@types/ant-design-vue",
+  "types": "./index.d.ts"
+}
