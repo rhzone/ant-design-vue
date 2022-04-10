@@ -711,6 +711,7 @@ function createBaseForm(option = {}, mixins = []) {
 
       render() {
         const { $slots, $scopedSlots } = this;
+        debugger;
         const formProps = {
           [formPropName]: this.getForm(),
         };

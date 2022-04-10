@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "antdv-demo": true,
+    "tests": true,
+    "antd-tools": true,
+    ".github": true
+  },
+  "path-intellisense.mappings": {
+    "ant-design-vue": "${workspaceFolder}/components"
+  }
+}
